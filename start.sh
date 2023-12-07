@@ -6,9 +6,11 @@
 # 判断命令是否正常执行 函数
 if_success() {
 	if [ $? -eq 0 ]; then
-	        action "$1" /bin/true
+	        # action "$1" /bin/true
+		echo "$1: Success"
 	else
-	        action "$2" /bin/false
+	        # action "$2" /bin/false
+		echo "$1: Failure"
 	        exit 1
 	fi
 }
